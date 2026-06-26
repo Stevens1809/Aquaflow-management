@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_clair">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- EN-TÊTE -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💧" android:textSize="32sp" android:layout_marginEnd="12dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tvTitreEntete" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="AquaFlow Management"
+                    android:textColor="@color/accent_bleu" android:textStyle="bold" android:textSize="16sp"/>
+                <TextView android:id="@+id/tvSousTitreEntete" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Compteur #BTM-0042 • Butembo"
+                    android:textColor="@color/texte_secondaire" android:textSize="12sp"/>
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/btnBasculerTheme"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="0dp" android:clickable="true" android:focusable="true">
+                <TextView android:id="@+id/tvLibelleTheme" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="☀️ Clair"
+                    android:textColor="@color/texte_principal" android:paddingHorizontal="14dp"
+                    android:paddingVertical="7dp" android:textSize="12sp" android:textStyle="bold"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- BANDEAU STATUT CONNEXION -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="14dp" app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+            app:cardElevation="1dp" android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="12dp"
+                android:gravity="center_vertical">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/tvStatutFirebase"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="● En attente..." android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="32dp"
+                    android:background="@color/contour_carte" android:layout_marginHorizontal="12dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/tvStatutCapteur"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="● Capteur inconnu" android:textSize="12sp"
+                        android:textStyle="bold" android:textColor="@color/texte_secondaire"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- LIGNE 1 : Débit | Volume -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:baselineAligned="false"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center"
+                    android:paddingVertical="18dp" android:paddingHorizontal="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🌊 Débit actuel" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvValeurDebit" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="--"
+                        android:textColor="@color/accent_bleu" android:textSize="30sp"
+                        android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="L/min" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="6dp"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center"
+                    android:paddingVertical="18dp" android:paddingHorizontal="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="💧 Volume / jour" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvValeurVolume" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="--"
+                        android:textColor="@color/accent_vert" android:textSize="30sp"
+                        android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Litres" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- LIGNE 2 : Ce mois -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp" app:cardElevation="2dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center"
+                android:paddingVertical="18dp" android:paddingHorizontal="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📅 Ce mois" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                <TextView android:id="@+id/tvValeurMois" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-- m³"
+                    android:textColor="@color/accent_bleu" android:textSize="26sp"
+                    android:textStyle="bold" android:layout_marginTop="4dp" android:gravity="center"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="consommé" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- COÛT DU MOIS -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre_panneau_sombre"
+            app:strokeColor="#4000BCD4" app:strokeWidth="1dp" app:cardElevation="4dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💰  Coût proportionnel du mois"
+                    android:textColor="#A0B0B9" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvCoutMois" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-- FC"
+                    android:textColor="@color/accent_vert" android:textSize="38sp"
+                    android:textStyle="bold" android:layout_marginTop="4dp"/>
+                <TextView android:id="@+id/tvInfoTarif" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarif : 270 FC/m³ • Réinitialisation le 1er"
+                    android:textColor="#80A0B0B9" android:textSize="12sp" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- SEUIL JOURNALIER -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+            app:cardElevation="2dp" android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📊  SEUIL JOURNALIER" android:textColor="@color/texte_secondaire"
+                    android:textStyle="bold" android:textSize="12sp" android:layout_marginBottom="14dp"/>
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/barreProgressionSeuil" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progress="0"
+                    app:trackCornerRadius="6dp" app:trackThickness="10dp"
+                    app:trackColor="@color/contour_carte" android:layout_marginBottom="10dp"/>
+                <TextView android:id="@+id/tvEtatSeuil" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="En attente de données..."
+                    android:textColor="@color/texte_secondaire" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvAlerteSeuil" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="⚠️  Seuil journalier dépassé !"
+                    android:textColor="@color/accent_rouge" android:textStyle="bold"
+                    android:textSize="13sp" android:layout_marginTop="8dp" android:visibility="gone"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- GRAPHE TEMPS RÉEL -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="160dp"
+            app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre_bleu"
+            app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp" app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📈  DÉBIT EN TEMPS RÉEL"
+                    android:textColor="@color/texte_secondaire" android:textStyle="bold" android:textSize="12sp"
+                    android:layout_marginBottom="10dp"/>
+                <com.example.gestionaquaflow.RealtimeLineChartView
+                    android:id="@+id/graphDebitTempsReel"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="2dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

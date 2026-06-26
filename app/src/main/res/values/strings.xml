@@ -1,0 +1,43 @@
+<!--
+    ═══════════════════════════════════════════════════════════
+    strings.xml — Toutes les chaînes de texte de l'application
+    Centraliser ici permet de traduire facilement l'app plus tard
+    ═══════════════════════════════════════════════════════════
+-->
+<resources>
+    <!-- Nom de l'application (affiché sur l'écran d'accueil du téléphone) -->
+    <string name="nom_application">AquaFlow Management</string>
+
+    <!-- Noms des onglets de navigation -->
+    <string name="nav_tableau_de_bord">Tableau de bord</string>
+    <string name="nav_historique">Historique</string>
+    <string name="nav_statistiques">Statistiques</string>
+    <string name="nav_reglages">Réglages</string>
+
+    <!-- Messages de confirmation -->
+    <string name="msg_config_enregistree">✅ Configuration enregistrée</string>
+    <string name="msg_erreur_nom">Le nom est requis</string>
+    <string name="msg_erreur_tarif">Tarif invalide</string>
+    <string name="msg_erreur_seuil">Seuil invalide</string>
+
+    <!-- Labels des cartes du tableau de bord -->
+    <string name="label_debit_actuel">🌊 Débit actuel</string>
+    <string name="label_volume_jour">💧 Volume / jour</string>
+    <string name="label_ce_mois">📅 Ce mois</string>
+    <string name="label_cout_mois">💰 Coût proportionnel du mois</string>
+    <string name="label_seuil">📊 SEUIL JOURNALIER</string>
+    <string name="label_alerte_seuil">⚠️ Seuil journalier dépassé !</string>
+
+    <!-- Unités -->
+    <string name="unite_litres_min">L/min</string>
+    <string name="unite_litres">Litres</string>
+    <string name="unite_consomme">consommé</string>
+
+    <!-- Filtres historique -->
+    <string name="filtre_jour">Jour</string>
+    <string name="filtre_mois">Mois</string>
+    <string name="filtre_annee">Année</string>
+
+    <!-- Version -->
+    <string name="version_app">AquaFlow Management v1.0.0  •  Prêt pour Firebase</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    menu_navigation_bas.xml — Éléments de la barre de navigation du bas
+    Chaque item correspond à un onglet de l'application.
+    Les IDs doivent correspondre exactement aux when() dans MainActivity.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Tableau de bord : page d'accueil avec les données en temps réel -->
+    <item
+        android:id="@+id/nav_tableau_de_bord"
+        android:icon="@drawable/ic_home"
+        android:title="Tableau de bord"/>
+
+    <!-- Historique : liste des consommations passées -->
+    <item
+        android:id="@+id/nav_historique"
+        android:icon="@drawable/ic_history"
+        android:title="Historique"/>
+
+    <!-- Statistiques : graphes et analyses -->
+    <item
+        android:id="@+id/nav_statistiques"
+        android:icon="@drawable/ic_stats"
+        android:title="Statistiques"/>
+
+    <!-- Réglages : configuration utilisateur -->
+    <item
+        android:id="@+id/nav_reglages"
+        android:icon="@drawable/ic_settings"
+        android:title="Réglages"/>
+
+</menu>

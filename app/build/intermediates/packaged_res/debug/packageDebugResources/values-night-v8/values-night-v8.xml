@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_bleu">#00BCD4</color>
+    <color name="accent_bleu_clair">#1A3D48</color>
+    <color name="accent_blue">@color/accent_bleu</color>
+    <color name="accent_blue_light">@color/accent_bleu_clair</color>
+    <color name="accent_green">@color/accent_vert</color>
+    <color name="accent_jaune">#F59E0B</color>
+    <color name="accent_red">@color/accent_rouge</color>
+    <color name="accent_rouge">#EF4444</color>
+    <color name="accent_vert">#10B981</color>
+    <color name="accent_yellow">@color/accent_jaune</color>
+    <color name="bg_app">@color/fond_application</color>
+    <color name="bg_card">@color/fond_carte</color>
+    <color name="bg_info">@color/fond_info</color>
+    <color name="bg_success_light">@color/fond_succes_clair</color>
+    <color name="card_glass">@color/carte_verre</color>
+    <color name="card_glass_blue">@color/carte_verre_bleu</color>
+    <color name="card_glass_dark_panel">@color/carte_verre_panneau_sombre</color>
+    <color name="card_stroke">@color/contour_carte</color>
+    <color name="card_stroke_blue">@color/contour_carte_bleu</color>
+    <color name="carte_verre">#D00D2137</color>
+    <color name="carte_verre_bleu">#D0102840</color>
+    <color name="carte_verre_panneau_sombre">#D0061825</color>
+    <color name="contour_carte">#3000BCD4</color>
+    <color name="contour_carte_bleu">#5000BCD4</color>
+    <color name="contour_succes">#1A5C3A</color>
+    <color name="fond_application">#0A1929</color>
+    <color name="fond_carte">#0D2137</color>
+    <color name="fond_info">#0D2137</color>
+    <color name="fond_nav_clair">#0A1929</color>
+    <color name="fond_nav_sombre">#0A1929</color>
+    <color name="fond_succes_clair">#0D2E1F</color>
+    <color name="nav_actif">#00A3FF</color>
+    <color name="nav_active">@color/nav_actif</color>
+    <color name="nav_bg_dark">@color/fond_nav_sombre</color>
+    <color name="nav_bg_light">@color/fond_nav_clair</color>
+    <color name="nav_inactif_clair">#A0A0A0</color>
+    <color name="nav_inactif_sombre">#A0A0A0</color>
+    <color name="nav_item_inactive_dark">@color/nav_inactif_sombre</color>
+    <color name="nav_item_inactive_light">@color/nav_inactif_clair</color>
+    <color name="stroke_success">@color/contour_succes</color>
+    <color name="text_main">@color/texte_principal</color>
+    <color name="text_sub">@color/texte_secondaire</color>
+    <color name="text_success">@color/texte_succes</color>
+    <color name="texte_principal">#E8F0FE</color>
+    <color name="texte_secondaire">#8BA4BE</color>
+    <color name="texte_succes">#34D399</color>
+    <style name="App.CustomIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:width">8dp</item>
+        <item name="android:height">8dp</item>
+        <item name="colorSecondaryContainer">@color/nav_active</item> <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item> </style>
+    <style name="Base.Theme.GestionAquaFlow" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+        <item name="colorSurfaceVariant">@color/nav_bg_dark</item>
+    </style>
+</resources>

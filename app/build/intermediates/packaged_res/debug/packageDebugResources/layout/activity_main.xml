@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_main.xml — Layout de l'activité principale
+    Contient deux éléments empilés verticalement :
+      1. conteneur_fragment : zone changeante (remplacée par chaque fragment)
+      2. navigation_bas     : barre de navigation fixe en bas
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Zone de contenu : prend tout l'espace disponible (weight=1) -->
+    <FrameLayout
+        android:id="@+id/conteneur_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Barre de navigation du bas : toujours visible -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_navigation_bas"
+        app:backgroundTint="@color/fond_nav_clair"/>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Définition de l'icône adaptative AquaFlow Management
+    Android 8.0+ (API 26+) : utilise fond + premier plan séparés
+    Cela permet à Android d'appliquer des formes (cercle, carré arrondi, etc.)
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fond : dégradé bleu profond → cyan -->
+    <background android:drawable="@drawable/ic_lanceur_fond"/>
+    <!-- Premier plan : goutte d'eau blanche + point IoT cyan -->
+    <foreground android:drawable="@drawable/ic_lanceur_premier_plan"/>
+    <!-- Monochrome : pour les thèmes système Android 13+ -->
+    <monochrome android:drawable="@drawable/ic_lanceur_premier_plan"/>
+</adaptive-icon>

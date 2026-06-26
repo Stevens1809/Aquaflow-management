@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    fragment_history.xml — Page Historique des consommations
+    ═══════════════════════════════════════════════════════════════════
+    Structure :
+      • En-tête  : commun à toutes les pages (géré par BaseFragment)
+      • Filtres  : 3 boutons Jour / Mois / Année
+      • Carte    : conteneurHistorique — rempli dynamiquement par HistoryFragment
+
+    Les boutons de filtre sont des MaterialCardView pour profiter
+    de l'effet verre et du coin arrondi.
+    Le conteneurHistorique est un LinearLayout vide au chargement ;
+    HistoryFragment.remplirHistorique() y ajoute des item_history_row.
+    ═══════════════════════════════════════════════════════════════════
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_clair">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ── EN-TÊTE ──────────────────────────────────────────────────
+             Identique sur toutes les pages.
+             IDs : tvTitreEntete, tvSousTitreEntete, btnBasculerTheme, tvLibelleTheme
+             Mis à jour automatiquement par BaseFragment.mettreAJourEntete()
+        ─────────────────────────────────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💧" android:textSize="32sp" android:layout_marginEnd="12dp"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvTitreEntete"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Gestion-Automatique AquaFlow"
+                    android:textColor="@color/accent_bleu" android:textStyle="bold" android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tvSousTitreEntete"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Compteur #BTM-0042 • Butembo"
+                    android:textColor="@color/texte_secondaire" android:textSize="12sp"/>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnBasculerTheme"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="0dp" android:clickable="true" android:focusable="true">
+                <TextView
+                    android:id="@+id/tvLibelleTheme"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="☀️ Clair" android:textColor="@color/texte_principal"
+                    android:paddingHorizontal="16dp" android:paddingVertical="8dp"
+                    android:textSize="13sp" android:textStyle="bold"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- ── BOUTONS DE FILTRE ──────────────────────────────────────────
+             3 boutons côte à côte : Jour | Mois | Année
+             Le bouton actif est coloré en accent_bleu (géré par code).
+             IDs carte : btnFiltreJour, btnFiltreMois, btnFiltreAnnee
+             IDs texte : tvLibelleFiltreJour, tvLibelleFiltreMois, tvLibelleFiltreAnnee
+        ─────────────────────────────────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Bouton Jour (actif par défaut) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnFiltreJour"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/accent_bleu" app:strokeWidth="0dp"
+                app:cardElevation="2dp" android:clickable="true" android:focusable="true">
+                <TextView
+                    android:id="@+id/tvLibelleFiltreJour"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Jour" android:textColor="@color/fond_application"
+                    android:textStyle="bold" android:gravity="center" android:paddingVertical="10dp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Space android:layout_width="8dp" android:layout_height="wrap_content"/>
+
+            <!-- Bouton Mois (inactif par défaut) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnFiltreMois"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="0dp" android:clickable="true" android:focusable="true">
+                <TextView
+                    android:id="@+id/tvLibelleFiltreMois"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Mois" android:textColor="@color/texte_principal"
+                    android:textStyle="bold" android:gravity="center" android:paddingVertical="10dp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Space android:layout_width="8dp" android:layout_height="wrap_content"/>
+
+            <!-- Bouton Année (inactif par défaut) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnFiltreAnnee"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="0dp" android:clickable="true" android:focusable="true">
+                <TextView
+                    android:id="@+id/tvLibelleFiltreAnnee"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Année" android:textColor="@color/texte_principal"
+                    android:textStyle="bold" android:gravity="center" android:paddingVertical="10dp"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- ── CONTENEUR DE LA LISTE ──────────────────────────────────────
+             LinearLayout vide : HistoryFragment.remplirHistorique() y ajoute
+             des vues item_history_row gonflées dynamiquement.
+             La carte enveloppe la liste pour l'effet glassmorphism.
+        ─────────────────────────────────────────────────────────────── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu"
+            app:strokeWidth="1dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:id="@+id/conteneurHistorique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

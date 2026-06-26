@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Version ronde de l'icône adaptative (même contenu,
+    Android choisit lui-même la forme selon le lanceur)
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_lanceur_fond"/>
+    <foreground android:drawable="@drawable/ic_lanceur_premier_plan"/>
+    <monochrome android:drawable="@drawable/ic_lanceur_premier_plan"/>
+</adaptive-icon>

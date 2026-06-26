@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_splash.xml — Écran de démarrage (Splash Screen)
+    ═══════════════════════════════════════════════════════════════════
+    Affiché 3 secondes au lancement avant MainActivity.
+    Centré verticalement et horizontalement.
+    Le fond utilise fond_application (s'adapte au thème clair/sombre).
+    ═══════════════════════════════════════════════════════════════════
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fond_application"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Logo de l'application : goutte d'eau emoji en grand -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💧"
+            android:textSize="100sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Nom officiel de l'application -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AquaFlow Management"
+            android:textColor="@color/texte_principal"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <!-- Sous-titre / crédit projet -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Steven Somo's project"
+            android:textColor="@color/texte_secondaire"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</RelativeLayout>

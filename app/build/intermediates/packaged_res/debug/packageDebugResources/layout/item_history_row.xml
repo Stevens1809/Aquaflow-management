@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_history_row.xml — Ligne réutilisable pour Historique ET Statistiques
+    Utilisé dans : HistoryFragment (liste historique) et StatsFragment (tableau coûts)
+
+    Structure :
+      ┌─────────────────────────────────────────────┐
+      │  tvEtiquetteHistorique     tvVolumeHistorique│
+      │  tvAlerteHistorique        tvCoutHistorique  │
+      └─────────────────────────────────────────────┘
+      ── separateurHistorique (View de 1dp) ──────────
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp">
+
+        <!-- Colonne gauche : date/mois + badge alerte -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+            <!-- Étiquette : date ("10 Avr"), mois ("Avr") ou année ("2025") -->
+            <TextView
+                android:id="@+id/tvEtiquetteHistorique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="— —"
+                android:textColor="@color/texte_principal"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <!-- Badge alerte : visible uniquement si seuil journalier dépassé -->
+            <TextView
+                android:id="@+id/tvAlerteHistorique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Seuil dépassé"
+                android:textColor="@color/accent_rouge"
+                android:textSize="11sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Colonne droite : volume + coût -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:layout_centerVertical="true">
+
+            <!-- Volume : en bleu normal, rouge si dépassement -->
+            <TextView
+                android:id="@+id/tvVolumeHistorique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 L"
+                android:textColor="@color/accent_bleu"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <!-- Coût en FC : toujours en gris secondaire -->
+            <TextView
+                android:id="@+id/tvCoutHistorique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 FC"
+                android:textColor="@color/texte_secondaire"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Séparateur entre lignes (masqué sur la dernière) -->
+    <View
+        android:id="@+id/separateurHistorique"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/contour_carte"/>
+
+</LinearLayout>

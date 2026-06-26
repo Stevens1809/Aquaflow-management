@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_bleu">#00BCD4</color>
+    <color name="accent_bleu_clair">#B2EBF2</color>
+    <color name="accent_blue">@color/accent_bleu</color>
+    <color name="accent_blue_light">@color/accent_bleu_clair</color>
+    <color name="accent_green">@color/accent_vert</color>
+    <color name="accent_jaune">#F59E0B</color>
+    <color name="accent_red">@color/accent_rouge</color>
+    <color name="accent_rouge">#EF4444</color>
+    <color name="accent_vert">#10B981</color>
+    <color name="accent_yellow">@color/accent_jaune</color>
+    <color name="bg_app">@color/fond_application</color>
+    <color name="bg_card">@color/fond_carte</color>
+    <color name="bg_info">@color/fond_info</color>
+    <color name="bg_success_light">@color/fond_succes_clair</color>
+    <color name="card_glass">@color/carte_verre</color>
+    <color name="card_glass_blue">@color/carte_verre_bleu</color>
+    <color name="card_glass_dark_panel">@color/carte_verre_panneau_sombre</color>
+    <color name="card_stroke">@color/contour_carte</color>
+    <color name="card_stroke_blue">@color/contour_carte_bleu</color>
+    <color name="carte_verre">#E8FFFFFF</color>
+    <color name="carte_verre_bleu">#E8EFF8FF</color>
+    <color name="carte_verre_panneau_sombre">#E80C2F3D</color>
+    <color name="contour_carte">#28FFFFFF</color>
+    <color name="contour_carte_bleu">#4000BCD4</color>
+    <color name="contour_succes">#A8D5B8</color>
+    <color name="fond_application">#F0F5FC</color>
+    <color name="fond_carte">#E8F0FA</color>
+    <color name="fond_info">#E3F0FB</color>
+    <color name="fond_nav_clair">#F0F7FF</color>
+    <color name="fond_nav_sombre">#0A1929</color>
+    <color name="fond_succes_clair">#E6F4EC</color>
+    <color name="nav_actif">#00A3FF</color>
+    <color name="nav_active">@color/nav_actif</color>
+    <color name="nav_bg_dark">@color/fond_nav_sombre</color>
+    <color name="nav_bg_light">@color/fond_nav_clair</color>
+    <color name="nav_inactif_clair">#707070</color>
+    <color name="nav_inactif_sombre">#A0A0A0</color>
+    <color name="nav_item_inactive_dark">@color/nav_inactif_sombre</color>
+    <color name="nav_item_inactive_light">@color/nav_inactif_clair</color>
+    <color name="stroke_success">@color/contour_succes</color>
+    <color name="text_main">@color/texte_principal</color>
+    <color name="text_sub">@color/texte_secondaire</color>
+    <color name="text_success">@color/texte_succes</color>
+    <color name="texte_principal">#0B1B3D</color>
+    <color name="texte_secondaire">#64748B</color>
+    <color name="texte_succes">#1A7A4A</color>
+    <string name="filtre_annee">Année</string>
+    <string name="filtre_jour">Jour</string>
+    <string name="filtre_mois">Mois</string>
+    <string name="gcm_defaultSenderId" translatable="false">820726067790</string>
+    <string name="google_api_key" translatable="false">AIzaSyCfKFsLZt3gvQg9-v-3_XlqxJ2ouw2_vsw</string>
+    <string name="google_app_id" translatable="false">1:820726067790:android:a69faee5055b82a20cc91f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCfKFsLZt3gvQg9-v-3_XlqxJ2ouw2_vsw</string>
+    <string name="google_storage_bucket" translatable="false">aquaflowmanagement-258b9.firebasestorage.app</string>
+    <string name="label_alerte_seuil">⚠️ Seuil journalier dépassé !</string>
+    <string name="label_ce_mois">📅 Ce mois</string>
+    <string name="label_cout_mois">💰 Coût proportionnel du mois</string>
+    <string name="label_debit_actuel">🌊 Débit actuel</string>
+    <string name="label_seuil">📊 SEUIL JOURNALIER</string>
+    <string name="label_volume_jour">💧 Volume / jour</string>
+    <string name="msg_config_enregistree">✅ Configuration enregistrée</string>
+    <string name="msg_erreur_nom">Le nom est requis</string>
+    <string name="msg_erreur_seuil">Seuil invalide</string>
+    <string name="msg_erreur_tarif">Tarif invalide</string>
+    <string name="nav_historique">Historique</string>
+    <string name="nav_reglages">Réglages</string>
+    <string name="nav_statistiques">Statistiques</string>
+    <string name="nav_tableau_de_bord">Tableau de bord</string>
+    <string name="nom_application">AquaFlow Management</string>
+    <string name="project_id" translatable="false">aquaflowmanagement-258b9</string>
+    <string name="unite_consomme">consommé</string>
+    <string name="unite_litres">Litres</string>
+    <string name="unite_litres_min">L/min</string>
+    <string name="version_app">AquaFlow Management v1.0.0  •  Prêt pour Firebase</string>
+    <style name="App.CustomIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:width">8dp</item>
+        <item name="android:height">8dp</item>
+        <item name="colorSecondaryContainer">@color/nav_active</item> <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item> </style>
+    <style name="Base.Theme.GestionAquaFlow" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+        <item name="colorSurfaceVariant">@color/nav_bg_light</item>
+    </style>
+    <style name="Theme.GestionAquaFlow" parent="Base.Theme.GestionAquaFlow"/>
+</resources>

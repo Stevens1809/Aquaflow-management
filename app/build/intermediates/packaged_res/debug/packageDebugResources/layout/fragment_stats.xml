@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    fragment_stats.xml — Page Statistiques
+    ═══════════════════════════════════════════════════════════════════
+    Structure :
+      • En-tête         : commun (géré par BaseFragment)
+      • KPI 3 colonnes  : volume mois | coût mois | moyenne/jour
+      • Tendance        : comparaison vs mois précédent (↑ ou ↓)
+      • Graphe barres   : conteneurBarresStats — rempli par StatsFragment
+      • Tableau coûts   : conteneurCoutsStats  — rempli par StatsFragment
+
+    IDs clés injectés par StatsFragment.rafraichirStatistiques() :
+      tvKpiVolumeMois, tvKpiCoutMois, tvKpiMoyenneJour
+      tvTendanceMois
+      conteneurBarresStats (LinearLayout pour les barres)
+      conteneurCoutsStats  (LinearLayout pour le tableau)
+    ═══════════════════════════════════════════════════════════════════
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_clair">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp">
+
+        <!-- ── EN-TÊTE (identique sur toutes les pages) ──────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💧" android:textSize="32sp" android:layout_marginEnd="12dp"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvTitreEntete"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Gestion-Automatique AquaFlow"
+                    android:textColor="@color/accent_bleu" android:textStyle="bold" android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tvSousTitreEntete"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Compteur #BTM-0042 • Butembo"
+                    android:textColor="@color/texte_secondaire" android:textSize="12sp"/>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnBasculerTheme"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="0dp" android:clickable="true" android:focusable="true">
+                <TextView
+                    android:id="@+id/tvLibelleTheme"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="☀️ Clair" android:textColor="@color/texte_principal"
+                    android:paddingHorizontal="16dp" android:paddingVertical="8dp"
+                    android:textSize="13sp" android:textStyle="bold"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- ── KPI : 3 tuiles d'indicateurs ─────────────────────────────
+             Chaque tuile : label | grande valeur | unité
+             Injectées par StatsFragment : tvKpiVolumeMois, tvKpiCoutMois, tvKpiMoyenneJour
+        ─────────────────────────────────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="14dp">
+
+            <!-- KPI Volume du mois -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="5dp"
+                app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Ce mois" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                    <TextView
+                        android:id="@+id/tvKpiVolumeMois"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textColor="@color/accent_bleu"
+                        android:textSize="18sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="volume" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- KPI Coût du mois -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginHorizontal="3dp"
+                app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Coût" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                    <TextView
+                        android:id="@+id/tvKpiCoutMois"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textColor="@color/accent_vert"
+                        android:textSize="18sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="FC" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- KPI Moyenne journalière -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="5dp"
+                app:cardCornerRadius="18dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Moyenne" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                    <TextView
+                        android:id="@+id/tvKpiMoyenneJour"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textColor="@color/accent_jaune"
+                        android:textSize="18sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="par jour" android:textColor="@color/texte_secondaire" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- ── TENDANCE vs mois précédent ────────────────────────────────
+             tvTendanceMois : texte + couleur injectés par StatsFragment
+             Vert si baisse de conso, rouge si hausse
+        ─────────────────────────────────────────────────────────────── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu"
+            app:strokeWidth="1dp"
+            app:cardElevation="1dp">
+            <TextView
+                android:id="@+id/tvTendanceMois"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="↑ Calcul en cours..."
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── GRAPHIQUE EN BARRES ────────────────────────────────────────
+             conteneurBarresStats : LinearLayout horizontal
+             StatsFragment y ajoute des item_stats_bar (un par mois)
+             Chaque barre a une hauteur proportionnelle à sa consommation
+        ─────────────────────────────────────────────────────────────── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/carte_verre_bleu"
+            app:strokeColor="@color/contour_carte_bleu"
+            app:strokeWidth="1dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊  CONSOMMATION MENSUELLE (m³)"
+                    android:textColor="@color/texte_secondaire"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+                <!-- Conteneur horizontal des barres — rempli dynamiquement -->
+                <LinearLayout
+                    android:id="@+id/conteneurBarresStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom"
+                    android:baselineAligned="false"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── TABLEAU DES COÛTS MENSUELS ─────────────────────────────────
+             conteneurCoutsStats : LinearLayout vertical
+             StatsFragment y ajoute des item_history_row (5 derniers mois)
+        ─────────────────────────────────────────────────────────────── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu"
+            app:strokeWidth="1dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💸  COÛTS MENSUELS (FC)"
+                    android:textColor="@color/texte_secondaire"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+                <!-- Conteneur des lignes coût — rempli dynamiquement -->
+                <LinearLayout
+                    android:id="@+id/conteneurCoutsStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

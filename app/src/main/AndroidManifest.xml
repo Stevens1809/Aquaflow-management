@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ═══════════════════════════════════════════════════════════════════
+    AndroidManifest.xml — Fichier de configuration principal de l'app
+    Déclare toutes les activités, permissions et métadonnées de l'app
+    ═══════════════════════════════════════════════════════════════════
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/nom_application"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GestionAquaFlow"
+        tools:targetApi="31">
+
+        <!--
+            ── SplashActivity ──────────────────────────────────────────────
+            Écran de démarrage : s'affiche 3 secondes au lancement
+            C'est le point d'entrée (LAUNCHER) de l'application
+            Elle applique aussi le thème sauvegardé avant que MainActivity
+            soit visible, pour éviter un flash de couleurs
+        -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--
+            ── MainActivity ───────────────────────────────────────────────
+            Activité principale avec la navigation par onglets (bottom nav)
+            Contient : Tableau de bord, Historique, Statistiques, Réglages
+            Non exportée = inaccessible depuis l'extérieur de l'application
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
+
+    </application>
+</manifest>

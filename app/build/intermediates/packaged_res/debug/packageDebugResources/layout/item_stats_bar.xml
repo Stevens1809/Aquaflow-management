@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_stats_bar.xml — Barre verticale du graphique de consommation mensuelle
+    Utilisé dans StatsFragment pour construire le graphe en barres.
+
+    Structure (de haut en bas) :
+      tvValeurBarre  : valeur numérique (ex: "6.8")
+      remplissageBarre : barre colorée dont la hauteur est calculée dynamiquement
+      tvEtiquetteBarre : étiquette du mois (ex: "Mar")
+
+    layout_weight=1 dans le LinearLayout parent → toutes les barres ont la même largeur
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:gravity="bottom|center_horizontal"
+    android:paddingHorizontal="4dp">
+
+    <!-- Valeur en m³ au-dessus de la barre -->
+    <TextView
+        android:id="@+id/tvValeurBarre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/texte_secondaire"
+        android:textSize="10sp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Barre colorée — hauteur injectée par code dans StatsFragment -->
+    <View
+        android:id="@+id/remplissageBarre"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/accent_bleu"/>
+
+    <!-- Étiquette du mois sous la barre -->
+    <TextView
+        android:id="@+id/tvEtiquetteBarre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="—"
+        android:textColor="@color/texte_secondaire"
+        android:textSize="10sp"
+        android:layout_marginTop="6dp"/>
+
+</LinearLayout>

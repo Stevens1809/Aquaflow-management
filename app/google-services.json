@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "VOTRE_NUMERO_DE_PROJET",
+    "project_id": "VOTRE_ID_DE_PROJET",
+    "storage_bucket": "VOTRE_NOM_DE_BUCKET.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:VOTRE_NUMERO_DE_PROJET:android:VOTRE_ID_APPLICATION",
+        "android_client_info": {
+          "package_name": "com.example.gestionaquaflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "VOTRE_CLE_API_MASQUEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

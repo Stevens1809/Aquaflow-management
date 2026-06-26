@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_clair"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💧" android:textSize="34sp" android:layout_marginEnd="14dp"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tvTitreEntete"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="AquaFlow Management"
+                    android:textColor="@color/accent_bleu" android:textStyle="bold"
+                    android:textSize="17sp"/>
+                <TextView android:id="@+id/tvSousTitreEntete"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Compteur #BTM-0042 • Butembo"
+                    android:textColor="@color/texte_secondaire" android:textSize="12sp"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnBasculerTheme"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/carte_verre"
+                app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+                app:cardElevation="0dp" android:clickable="true" android:focusable="true">
+                <TextView android:id="@+id/tvLibelleTheme"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="☀️ Clair" android:textColor="@color/texte_principal"
+                    android:paddingHorizontal="14dp" android:paddingVertical="8dp"
+                    android:textSize="12sp" android:textStyle="bold"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:layout_width="4dp" android:layout_height="22dp"
+                android:background="@color/accent_bleu" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📡  ÉTAT DU SYSTÈME"
+                android:textColor="@color/texte_secondaire" android:textSize="12sp"
+                android:textStyle="bold" android:letterSpacing="0.05"/>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="@color/carte_verre_panneau_sombre"
+            app:strokeColor="#5000BCD4" app:strokeWidth="1dp"
+            app:cardElevation="6dp" android:layout_marginBottom="24dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="18dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="☁️" android:textSize="22sp" android:gravity="center"
+                        android:background="#1A00BCD4" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Base de données Firebase"
+                            android:textColor="#C8D8E8" android:textSize="13sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvStatutFirebaseDetail"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Vérification..." android:textColor="@color/texte_secondaire"
+                            android:textSize="11sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <com.google.android.material.card.MaterialCardView android:id="@+id/badgeFirebase"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp" app:cardBackgroundColor="#CC333333"
+                        app:strokeWidth="0dp" app:cardElevation="0dp">
+                        <TextView android:id="@+id/tvBadgeFirebase"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="..." android:textColor="#FFFFFF"
+                            android:textSize="11sp" android:textStyle="bold"
+                            android:paddingHorizontal="14dp" android:paddingVertical="6dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="#25FFFFFF" android:layout_marginBottom="16dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🔌" android:textSize="22sp" android:gravity="center"
+                        android:background="#1A00BCD4"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Capteur YF-S201 / ESP32"
+                            android:textColor="#C8D8E8" android:textSize="13sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvStatutCapteurDetail"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="En attente de données..."
+                            android:textColor="@color/texte_secondaire"
+                            android:textSize="11sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <com.google.android.material.card.MaterialCardView android:id="@+id/badgeCapteur"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp" app:cardBackgroundColor="#CC333333"
+                        app:strokeWidth="0dp" app:cardElevation="0dp">
+                        <TextView android:id="@+id/tvBadgeCapteur"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="..." android:textColor="#FFFFFF"
+                            android:textSize="11sp" android:textStyle="bold"
+                            android:paddingHorizontal="14dp" android:paddingVertical="6dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="#25FFFFFF" android:layout_marginBottom="16dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="🕐" android:textSize="22sp" android:gravity="center"
+                        android:background="#1A00BCD4"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Dernière synchronisation"
+                            android:textColor="#C8D8E8" android:textSize="13sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvDerniereSynchro"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Jamais" android:textColor="@color/texte_secondaire"
+                            android:textSize="11sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <com.google.android.material.card.MaterialCardView android:id="@+id/btnActualiserStatut"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        app:cardCornerRadius="14dp" app:cardBackgroundColor="#3300BCD4"
+                        app:strokeColor="@color/accent_bleu" app:strokeWidth="1dp"
+                        app:cardElevation="0dp" android:clickable="true" android:focusable="true">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="↺  Actualiser" android:textColor="@color/accent_bleu"
+                            android:textSize="12sp" android:textStyle="bold"
+                            android:paddingHorizontal="14dp" android:paddingVertical="7dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:layout_width="4dp" android:layout_height="22dp"
+                android:background="@color/accent_bleu" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="☁️  COMPTE FIREBASE"
+                android:textColor="@color/texte_secondaire" android:textSize="12sp"
+                android:textStyle="bold" android:letterSpacing="0.05"/>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp" app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+            app:cardElevation="3dp" android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <LinearLayout android:id="@+id/layoutStatutConnecte"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@color/fond_succes_clair"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:visibility="gone">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/tvStatutCompte"
+                        android:text="✅ Connecté : email@exemple.com"
+                        android:textColor="@color/texte_succes" android:textSize="13sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutEmail"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Adresse e-mail"
+                    app:helperText="Utilisez le même compte que l'ESP32"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutMotDePasse"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Mot de passe (6 min.)"
+                    app:passwordToggleEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="16dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMotDePasse" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/btnCreerCompte"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginEnd="6dp"
+                        android:text="Créer un compte"
+                        android:backgroundTint="@color/accent_bleu" app:cornerRadius="14dp"/>
+                    <Button android:id="@+id/btnSeConnecter"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="6dp"
+                        android:text="Se connecter"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:cornerRadius="14dp"/>
+                </LinearLayout>
+
+                <Button android:id="@+id/btnSeDeconnecter"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Se déconnecter"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:cornerRadius="14dp" android:layout_marginTop="4dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:layout_width="4dp" android:layout_height="22dp"
+                android:background="@color/accent_vert" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="👤  PROFIL UTILISATEUR"
+                android:textColor="@color/texte_secondaire" android:textSize="12sp"
+                android:textStyle="bold" android:letterSpacing="0.05"/>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp" app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+            app:cardElevation="3dp" android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Nom de l'abonné"
+                    app:helperText="Nom affiché dans l'en-tête de l'application"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="14dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNomAbonne" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textPersonName"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Numéro de compteur"
+                    app:helperText="Ex : BTM-0042 — affiché dans l'en-tête"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="14dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNumCompteur" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Adresse"
+                    app:helperText="Adresse d'installation du compteur"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAdresse" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textPostalAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:layout_width="4dp" android:layout_height="22dp"
+                android:background="@color/accent_jaune" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💰  FACTURATION &amp; SEUIL"
+                android:textColor="@color/texte_secondaire" android:textSize="12sp"
+                android:textStyle="bold" android:letterSpacing="0.05"/>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp" app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+            app:cardElevation="3dp" android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Tarif (FC / m³)" app:suffixText="FC/m³"
+                    app:helperText="Coût au mètre cube facturé par la régie"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="14dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTarif" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Seuil d'alerte journalier" app:suffixText="m³/j"
+                    app:helperText="Une notification est envoyée si ce seuil est dépassé"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="14dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSeuil" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp" app:cardBackgroundColor="@color/fond_info"
+                        app:strokeWidth="0dp" app:cardElevation="0dp">
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" android:padding="10dp" android:gravity="center">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="TARIF ACTUEL" android:textSize="9sp"
+                                android:textColor="@color/texte_secondaire" android:textStyle="bold"
+                                android:letterSpacing="0.1"/>
+                            <TextView android:id="@+id/tvTarifActuel"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="270 FC/m³" android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/accent_bleu" android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="6dp"
+                        app:cardCornerRadius="12dp" app:cardBackgroundColor="@color/fond_info"
+                        app:strokeWidth="0dp" app:cardElevation="0dp">
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" android:padding="10dp" android:gravity="center">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="SEUIL ACTUEL" android:textSize="9sp"
+                                android:textColor="@color/texte_secondaire" android:textStyle="bold"
+                                android:letterSpacing="0.1"/>
+                            <TextView android:id="@+id/tvSeuilActuel"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="0.500 m³/j" android:textSize="14sp" android:textStyle="bold"
+                                android:textColor="@color/accent_jaune" android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:layout_width="4dp" android:layout_height="22dp"
+                android:background="@color/accent_rouge" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔔  NOTIFICATIONS"
+                android:textColor="@color/texte_secondaire" android:textSize="12sp"
+                android:textStyle="bold" android:letterSpacing="0.05"/>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp" app:cardBackgroundColor="@color/carte_verre"
+            app:strokeColor="@color/contour_carte_bleu" app:strokeWidth="1dp"
+            app:cardElevation="3dp" android:layout_marginBottom="24dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="8dp">
+
+                <LinearLayout android:id="@+id/layoutStatutPermission"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:padding="12dp" android:layout_marginBottom="4dp"
+                    android:background="@color/fond_info">
+                    <TextView android:id="@+id/tvStatutPermissionNotif"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔔 Permission notifications : accordée"
+                        android:textColor="@color/texte_principal" android:textSize="12sp"/>
+                    <Button android:id="@+id/btnDemanderPermissionNotif"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Autoriser"
+                        android:textSize="11sp"
+                        android:backgroundTint="@color/accent_bleu"
+                        app:cornerRadius="10dp"
+                        android:paddingHorizontal="12dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/contour_carte" android:layout_marginHorizontal="12dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:padding="14dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Alertes de consommation"
+                            android:textColor="@color/texte_principal" android:textSize="15sp"
+                            android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Notifie quand le seuil journalier est dépassé"
+                            android:textColor="@color/texte_secondaire" android:textSize="12sp"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchNotifications"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button android:id="@+id/btnEnregistrerConfig"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:text="💾  Enregistrer la configuration"
+            android:textSize="16sp" android:textStyle="bold"
+            android:backgroundTint="@color/accent_bleu" app:cornerRadius="20dp"
+            android:layout_marginBottom="20dp"
+            android:letterSpacing="0.02"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="@color/carte_verre_panneau_sombre"
+            app:strokeColor="#4000BCD4" app:strokeWidth="1dp"
+            app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💧 AquaFlow Management"
+                    android:textColor="@color/accent_bleu" android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <TextView android:id="@+id/tvVersionApp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="v1.0.0  •  YF-S201 + ESP32 + Firebase"
+                    android:textColor="#80A0B0B9" android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

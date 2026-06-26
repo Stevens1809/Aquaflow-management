@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ═══════════════════════════════════════════════════════════════════
+    colors.xml — Palette de couleurs du mode CLAIR
+    ═══════════════════════════════════════════════════════════════════
+    Nomenclature ARGB : #AARRGGBB
+      AA = opacité (FF=100%, E8=91%, D0=82%, 40=25%, 28=16%)
+      RR,GG,BB = composantes rouge, vert, bleu
+
+    Les noms français correspondent exactement aux attributs utilisés
+    dans les layouts XML (app:cardBackgroundColor, android:textColor…)
+    ═══════════════════════════════════════════════════════════════════
+-->
+<resources>
+
+    <!-- ── Arrière-plans ───────────────────────────────────────────── -->
+    <!-- fond_application : couleur de fond générale des pages -->
+    <color name="fond_application">#F0F5FC</color>
+    <!-- fond_carte : fond des cartes opaques (non utilisé si on préfère carte_verre) -->
+    <color name="fond_carte">#E8F0FA</color>
+
+    <!-- ── Cartes effet verre (glassmorphism) ─────────────────────── -->
+    <!-- carte_verre : blanc à 91% — laisse transparaître légèrement le fond -->
+    <color name="carte_verre">#E8FFFFFF</color>
+    <!-- carte_verre_bleu : teinte bleue douce pour les cartes graphiques/stats -->
+    <color name="carte_verre_bleu">#E8EFF8FF</color>
+    <!-- carte_verre_panneau_sombre : fond sombre semi-transparent (bloc coût du mois) -->
+    <color name="carte_verre_panneau_sombre">#E80C2F3D</color>
+
+    <!-- ── Couleurs de texte ───────────────────────────────────────── -->
+    <!-- texte_principal : texte foncé (titres, labels importants) -->
+    <color name="texte_principal">#0B1B3D</color>
+    <!-- texte_secondaire : texte gris (sous-titres, unités, hints) -->
+    <color name="texte_secondaire">#64748B</color>
+
+    <!-- ── Couleurs d'accent ───────────────────────────────────────── -->
+    <!-- accent_bleu : couleur primaire AquaFlow (cyan/bleu eau) -->
+    <color name="accent_bleu">#00BCD4</color>
+    <!-- accent_bleu_clair : version délavée pour barres inactives dans le graphe -->
+    <color name="accent_bleu_clair">#B2EBF2</color>
+    <!-- accent_vert : valeurs positives, coûts, confirmations -->
+    <color name="accent_vert">#10B981</color>
+    <!-- accent_jaune : pression, avertissements modérés -->
+    <color name="accent_jaune">#F59E0B</color>
+    <!-- accent_rouge : dépassements de seuil, erreurs -->
+    <color name="accent_rouge">#EF4444</color>
+
+    <!-- ── Bordures des cartes ────────────────────────────────────── -->
+    <!-- contour_carte : blanc à 16% — reflet discret sur bord supérieur (mode clair) -->
+    <color name="contour_carte">#28FFFFFF</color>
+    <!-- contour_carte_bleu : cyan à 25% — halo coloré subtil autour des cartes -->
+    <color name="contour_carte_bleu">#4000BCD4</color>
+
+    <!-- ── Navigation (Bottom Navigation View) ───────────────────── -->
+    <color name="fond_nav_clair">#F0F7FF</color>
+    <color name="nav_inactif_clair">#707070</color>
+    <color name="fond_nav_sombre">#0A1929</color>
+    <color name="nav_inactif_sombre">#A0A0A0</color>
+    <color name="nav_actif">#00A3FF</color>
+
+    <!-- ── Couleurs de statut (succès, info) ─────────────────────── -->
+    <color name="texte_succes">#1A7A4A</color>
+    <color name="fond_succes_clair">#E6F4EC</color>
+    <color name="contour_succes">#A8D5B8</color>
+    <color name="fond_info">#E3F0FB</color>
+
+    <!-- ── Alias de compatibilité (anciens noms utilisés dans le code) ── -->
+    <!-- Ces alias permettent de ne pas casser les références existantes -->
+    <color name="bg_app">@color/fond_application</color>
+    <color name="bg_card">@color/fond_carte</color>
+    <color name="card_glass">@color/carte_verre</color>
+    <color name="card_glass_blue">@color/carte_verre_bleu</color>
+    <color name="card_glass_dark_panel">@color/carte_verre_panneau_sombre</color>
+    <color name="text_main">@color/texte_principal</color>
+    <color name="text_sub">@color/texte_secondaire</color>
+    <color name="accent_blue">@color/accent_bleu</color>
+    <color name="accent_blue_light">@color/accent_bleu_clair</color>
+    <color name="accent_green">@color/accent_vert</color>
+    <color name="accent_yellow">@color/accent_jaune</color>
+    <color name="accent_red">@color/accent_rouge</color>
+    <color name="card_stroke">@color/contour_carte</color>
+    <color name="card_stroke_blue">@color/contour_carte_bleu</color>
+    <color name="nav_bg_light">@color/fond_nav_clair</color>
+    <color name="nav_item_inactive_light">@color/nav_inactif_clair</color>
+    <color name="nav_bg_dark">@color/fond_nav_sombre</color>
+    <color name="nav_item_inactive_dark">@color/nav_inactif_sombre</color>
+    <color name="nav_active">@color/nav_actif</color>
+    <color name="text_success">@color/texte_succes</color>
+    <color name="bg_success_light">@color/fond_succes_clair</color>
+    <color name="stroke_success">@color/contour_succes</color>
+    <color name="bg_info">@color/fond_info</color>
+
+</resources>

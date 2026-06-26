@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Premier plan de l'icône adaptative AquaFlow Management
+    Goutte d'eau blanche + initiales AF stylisées
+    Viewbox 108x108 (zone sûre : centre 72x72 = 18,18 à 90,90)
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- ═══════════════════════════════════════════
+         GOUTTE D'EAU PRINCIPALE (centrée)
+         Forme : demi-cercle bas + pointe haute
+         Centre X=54, base Y=80, pointe Y=28
+    ═══════════════════════════════════════════ -->
+    <path
+        android:pathData="
+          M54,28
+          C54,28 30,55 30,68
+          A24,24 0 0 0 78,68
+          C78,55 54,28 54,28 Z"
+        android:fillColor="#FFFFFFFF"/>
+
+    <!-- Reflet intérieur de la goutte (ovale blanc translucide en haut gauche) -->
+    <path
+        android:pathData="M46,50 Q50,42 56,46 Q52,54 46,50 Z"
+        android:fillColor="#60FFFFFF"/>
+
+    <!-- ═══════════════════════════════════════════
+         LETTRE "A" intégrée dans la goutte
+         (trait stylisé cyan pour marquer AquaFlow)
+    ═══════════════════════════════════════════ -->
+    <path
+        android:pathData="M49,72 L54,58 L59,72 M51.5,67 L56.5,67"
+        android:strokeWidth="2.8"
+        android:strokeColor="#0A4A7A"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- ═══════════════════════════════════════════
+         POINT DE CONNEXION / IOT
+         Petit cercle cyan sous la goutte = symbolise
+         la connectivité du compteur intelligent
+    ═══════════════════════════════════════════ -->
+    <path
+        android:pathData="M54,86 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"
+        android:fillColor="#FF00BCD4"/>
+
+    <!-- Ligne verticale reliant la goutte au point -->
+    <path
+        android:pathData="M54,80 L54,83"
+        android:strokeWidth="2"
+        android:strokeColor="#FF00BCD4"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"/>
+
+</vector>

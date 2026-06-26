@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/color_nav_item_color.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/color/nav_item_color.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/layout_activity_main.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/layout_fragment_dashboard.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_ic_settings.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_nav_background.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/nav_background.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_ic_stats.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/ic_stats.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_ic_lanceur_fond.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/ic_lanceur_fond.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_ic_lanceur_premier_plan.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/ic_lanceur_premier_plan.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_dot_success.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/dot_success.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/color_color.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/color/color.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/layout_fragment_stats.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/layout/fragment_stats.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_ic_home.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/layout_fragment_history.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/layout_item_stats_bar.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/layout/item_stats_bar.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/layout_item_history_row.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/layout/item_history_row.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/xml_backup_rules.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_ic_history.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/ic_history.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/layout_activity_splash.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/layout_fragment_settings.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/drawable_fond_clair.jpg.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/drawable/fond_clair.jpg"
+    },
+    {
+        "merged": "com.example.gestionaquaflow.app-debug-39:/menu_menu_navigation_bas.xml.flat",
+        "source": "com.example.gestionaquaflow.app-main-41:/menu/menu_navigation_bas.xml"
+    }
+]
